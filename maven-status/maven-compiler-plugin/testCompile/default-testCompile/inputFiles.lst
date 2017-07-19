@@ -1,0 +1,9 @@
+/Users/sameerpattni/AnypointStudio/workspace/samba-connector/src/test/java/org/mule/modules/smb/automation/functional/DeleteFileTestCases.java
+/Users/sameerpattni/AnypointStudio/workspace/samba-connector/src/test/java/org/mule/modules/smb/automation/functional/ReadFileTestCases.java
+/Users/sameerpattni/AnypointStudio/workspace/samba-connector/src/test/java/org/mule/modules/smb/automation/functional/GetFilesTestCases.java
+/Users/sameerpattni/AnypointStudio/workspace/samba-connector/src/test/java/org/mule/modules/smb/automation/functional/TestProperties.java
+/Users/sameerpattni/AnypointStudio/workspace/samba-connector/src/test/java/org/mule/modules/smb/automation/functional/BaseSmbTestCase.java
+/Users/sameerpattni/AnypointStudio/workspace/samba-connector/src/test/java/org/mule/modules/smb/automation/functional/CopyFileTestCases.java
+/Users/sameerpattni/AnypointStudio/workspace/samba-connector/src/test/java/org/mule/modules/smb/automation/functional/MoveFileTestCases.java
+/Users/sameerpattni/AnypointStudio/workspace/samba-connector/src/test/java/org/mule/modules/smb/automation/functional/SourceTestCases.java
+/Users/sameerpattni/AnypointStudio/workspace/samba-connector/src/test/java/org/mule/modules/smb/automation/runner/FunctionalTestSuite.java

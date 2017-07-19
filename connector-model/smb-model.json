@@ -1,0 +1,439 @@
+{
+  "minMuleVersion": "3.5.0",
+  "requiresEntitlement": false,
+  "requiresEnterpriseLicense": false,
+  "configs": [
+    {
+      "configElementName": "config",
+      "attributes": [
+        {
+          "javaTypeName": "String",
+          "fullQualifiedJavaTypeName": "java.lang.String",
+          "isOptional": false,
+          "isRefOnly": false,
+          "isPayload": false,
+          "isComplexType": false,
+          "isEnum": false,
+          "isString": true,
+          "typeMirror": "java.lang.String",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "username"
+        },
+        {
+          "javaTypeName": "String",
+          "fullQualifiedJavaTypeName": "java.lang.String",
+          "isOptional": false,
+          "isRefOnly": false,
+          "isPayload": false,
+          "isComplexType": false,
+          "isEnum": false,
+          "isString": true,
+          "typeMirror": "java.lang.String",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "password"
+        },
+        {
+          "javaTypeName": "String",
+          "fullQualifiedJavaTypeName": "java.lang.String",
+          "isOptional": false,
+          "isRefOnly": false,
+          "isPayload": false,
+          "isComplexType": false,
+          "isEnum": false,
+          "isString": true,
+          "typeMirror": "java.lang.String",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "host"
+        },
+        {
+          "javaTypeName": "String",
+          "fullQualifiedJavaTypeName": "java.lang.String",
+          "isOptional": true,
+          "isRefOnly": false,
+          "isPayload": false,
+          "isComplexType": false,
+          "isEnum": false,
+          "isString": true,
+          "typeMirror": "java.lang.String",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "domain"
+        },
+        {
+          "javaTypeName": "String",
+          "fullQualifiedJavaTypeName": "java.lang.String",
+          "isOptional": false,
+          "isRefOnly": false,
+          "isPayload": false,
+          "isComplexType": false,
+          "isEnum": false,
+          "isString": true,
+          "typeMirror": "java.lang.String",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "folder"
+        },
+        {
+          "javaTypeName": "Boolean",
+          "fullQualifiedJavaTypeName": "boolean",
+          "defaultValue": "false",
+          "isOptional": true,
+          "isRefOnly": false,
+          "isPayload": false,
+          "isComplexType": false,
+          "isEnum": false,
+          "isString": false,
+          "typeMirror": "boolean",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "checkFileAge"
+        },
+        {
+          "javaTypeName": "Long",
+          "fullQualifiedJavaTypeName": "long",
+          "isOptional": true,
+          "isRefOnly": false,
+          "isPayload": false,
+          "isComplexType": false,
+          "isEnum": false,
+          "isString": false,
+          "typeMirror": "long",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "fileAge"
+        },
+        {
+          "javaTypeName": "String",
+          "fullQualifiedJavaTypeName": "java.lang.String",
+          "isOptional": true,
+          "isRefOnly": false,
+          "isPayload": false,
+          "isComplexType": false,
+          "isEnum": false,
+          "isString": true,
+          "typeMirror": "java.lang.String",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "outputFolder"
+        }
+      ],
+      "javaName": "ConnectorConfig",
+      "friendlyName": "Configuration",
+      "type": "ConfigurationConfig"
+    }
+  ],
+  "attributes": [],
+  "processors": [
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [],
+      "javaReturnType": {
+        "javaTypeName": "Boolean",
+        "fullQualifiedJavaTypeName": "java.lang.Boolean",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "A greeting message"
+      },
+      "parameters": [
+        {
+          "javaTypeName": "String",
+          "fullQualifiedJavaTypeName": "java.lang.String",
+          "isOptional": false,
+          "isRefOnly": false,
+          "isPayload": true,
+          "isComplexType": false,
+          "isEnum": false,
+          "isString": true,
+          "typeMirror": "java.lang.String",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "payload"
+        },
+        {
+          "javaTypeName": "String",
+          "fullQualifiedJavaTypeName": "java.lang.String",
+          "isOptional": false,
+          "isRefOnly": false,
+          "isPayload": false,
+          "isComplexType": false,
+          "isEnum": false,
+          "isString": true,
+          "typeMirror": "java.lang.String",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "printerFileExtensionType"
+        },
+        {
+          "javaTypeName": "String",
+          "fullQualifiedJavaTypeName": "java.lang.String",
+          "isOptional": false,
+          "isRefOnly": false,
+          "isPayload": false,
+          "isComplexType": false,
+          "isEnum": false,
+          "isString": true,
+          "typeMirror": "java.lang.String",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "fileName"
+        }
+      ],
+      "apiDocUrl": "",
+      "javaName": "copyFile",
+      "friendlyName": "Copy file",
+      "description": "Custom processor",
+      "xsdName": "copy-file"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [],
+      "javaReturnType": {
+        "javaTypeName": "List\u003cString\u003e",
+        "fullQualifiedJavaTypeName": "java.util.List\u003cjava.lang.String\u003e",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "list of files"
+      },
+      "parameters": [
+        {
+          "javaTypeName": "String",
+          "fullQualifiedJavaTypeName": "java.lang.String",
+          "isOptional": false,
+          "isRefOnly": false,
+          "isPayload": true,
+          "isComplexType": false,
+          "isEnum": false,
+          "isString": true,
+          "typeMirror": "java.lang.String",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "payload",
+          "description": ""
+        },
+        {
+          "javaTypeName": "String",
+          "fullQualifiedJavaTypeName": "java.lang.String",
+          "isOptional": false,
+          "isRefOnly": false,
+          "isPayload": false,
+          "isComplexType": false,
+          "isEnum": false,
+          "isString": true,
+          "typeMirror": "java.lang.String",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "filePattern"
+        }
+      ],
+      "apiDocUrl": "",
+      "javaName": "getFiles",
+      "friendlyName": "Get files",
+      "description": "Returns a list of files from SMB Share based on a file pattern",
+      "xsdName": "get-files"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [],
+      "javaReturnType": {
+        "javaTypeName": "byte[]",
+        "fullQualifiedJavaTypeName": "byte[]",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "returns file contents as byte array"
+      },
+      "parameters": [
+        {
+          "javaTypeName": "String",
+          "fullQualifiedJavaTypeName": "java.lang.String",
+          "isOptional": false,
+          "isRefOnly": false,
+          "isPayload": false,
+          "isComplexType": false,
+          "isEnum": false,
+          "isString": true,
+          "typeMirror": "java.lang.String",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "fileName",
+          "description": "The name of the file to read (excluding path)"
+        }
+      ],
+      "apiDocUrl": "",
+      "javaName": "readFile",
+      "friendlyName": "Read file",
+      "description": "Message processor that can be directly called to read a specified File",
+      "xsdName": "read-file"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [],
+      "javaReturnType": {
+        "javaTypeName": "boolean",
+        "fullQualifiedJavaTypeName": "boolean",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "returns boolean to indicate successful deletion of a file"
+      },
+      "parameters": [
+        {
+          "javaTypeName": "SmbFile",
+          "fullQualifiedJavaTypeName": "jcifs.smb.SmbFile",
+          "isOptional": false,
+          "isRefOnly": false,
+          "isPayload": false,
+          "isComplexType": false,
+          "isEnum": false,
+          "isString": false,
+          "typeMirror": "jcifs.smb.SmbFile",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "smbObject"
+        }
+      ],
+      "apiDocUrl": "",
+      "javaName": "deleteFile",
+      "friendlyName": "Delete file",
+      "description": "Deletes a specified file. Requires the SmbFile object.",
+      "xsdName": "delete-file"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [],
+      "javaReturnType": {
+        "javaTypeName": "boolean",
+        "fullQualifiedJavaTypeName": "boolean",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": "returns boolean to indicate successful move of a file"
+      },
+      "parameters": [
+        {
+          "javaTypeName": "SmbFile",
+          "fullQualifiedJavaTypeName": "jcifs.smb.SmbFile",
+          "isOptional": false,
+          "isRefOnly": false,
+          "isPayload": false,
+          "isComplexType": false,
+          "isEnum": false,
+          "isString": false,
+          "typeMirror": "jcifs.smb.SmbFile",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "smbObject",
+          "description": "The SmbFile object of the processing file"
+        },
+        {
+          "javaTypeName": "String",
+          "fullQualifiedJavaTypeName": "java.lang.String",
+          "isOptional": false,
+          "isRefOnly": false,
+          "isPayload": false,
+          "isComplexType": false,
+          "isEnum": false,
+          "isString": true,
+          "typeMirror": "java.lang.String",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "smbOriginalFilename"
+        }
+      ],
+      "apiDocUrl": "",
+      "javaName": "moveFile",
+      "friendlyName": "Move file",
+      "description": "Moves a specified file to the output folder. Requires inbound properties to be set.",
+      "xsdName": "move-file"
+    }
+  ],
+  "filters": [],
+  "transformers": [],
+  "sources": [
+    {
+      "samples": [],
+      "javaReturnType": {
+        "javaTypeName": "",
+        "fullQualifiedJavaTypeName": "void",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": ""
+      },
+      "parameters": [
+        {
+          "javaTypeName": "String",
+          "fullQualifiedJavaTypeName": "java.lang.String",
+          "isOptional": false,
+          "isRefOnly": false,
+          "isPayload": false,
+          "isComplexType": false,
+          "isEnum": false,
+          "isString": true,
+          "typeMirror": "java.lang.String",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "filePattern",
+          "description": "The file pattern to poll"
+        },
+        {
+          "javaTypeName": "SourceCallback",
+          "fullQualifiedJavaTypeName": "org.mule.api.callback.SourceCallback",
+          "isOptional": false,
+          "isRefOnly": false,
+          "isPayload": false,
+          "isComplexType": false,
+          "isEnum": false,
+          "isString": false,
+          "typeMirror": "org.mule.api.callback.SourceCallback",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "sourceCallback",
+          "description": ""
+        }
+      ],
+      "apiDocUrl": "",
+      "javaName": "receiver",
+      "friendlyName": "Receiver",
+      "description": "The inbound receiver polls for files in a specified smb share and creates a message for Mule to process.\nThe polling period is configurable in the Connector.",
+      "xsdName": "receiver"
+    }
+  ],
+  "javaName": "SmbConnector",
+  "friendlyName": "Smb",
+  "xsdName": "smb"
+}

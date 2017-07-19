@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<namespace xmlns="http://www.mulesoft.org/schema/mule/tooling.attributes" xmlns:mule="http://www.mulesoft.org/schema/mule/core" url="http://www.mulesoft.org/schema/mule/smb" prefix="smb">
+  <global-cloud-connector versions="[3.5.0,8.0.0]" caption="Smb" description="" icon="" localId="parentConfig" image="" abstract="true" extends="http://www.mulesoft.org/schema/mule/smb/abstractSmbConnectorGeneric"></global-cloud-connector>
+  <cloud-connector-message-source supportsInbound="true" supportsOutbound="false" versions="[3.5.0,8.0.0]" caption="Smb (Streaming)" description="" icon="icons/theme.classic/smb-endpoint-small.png" localId="endpoint" image="icons/theme.classic/smb-endpoint-large.png" abstract="false" extends="http://www.mulesoft.org/schema/mule/smb/abstractSmbConnectorGeneric">
+    <attribute-category caption="General" description="General.">
+      <group id="smbConnectorGeneric" caption="Basic Settings">
+        <modeSwitch alwaysCombo="true" name="Smb operations to execute" caption="Operation" description="Operation.">
+          <no-operation abstractElement="http://www.mulesoft.org/schema/mule/smb/abstractSmbConnectorGeneric" versions="[3.5.0,8.0.0]" connector-name="source"></no-operation>
+          <mode modeId="http://www.mulesoft.org/schema/mule/smb/receiver" modeLabel="Receiver"></mode>
+        </modeSwitch>
+      </group>
+    </attribute-category>
+  </cloud-connector-message-source>
+  <cloud-connector-message-source supportsInbound="true" supportsOutbound="false" inboundLocalName="receiver" caption="Receiver" description="The inbound receiver polls for files in a specified smb share and creates a message for Mule to process.
+The polling period is configurable in the Connector." icon="icons/theme.classic/smb-endpoint-small.png" localId="receiver" image="icons/theme.classic/smb-endpoint-large.png" abstract="true" extends="http://www.mulesoft.org/schema/mule/smb/abstractSmbConnectorGeneric">
+    <attribute-category caption="General" description="General.">
+      <group id="general" caption="General">
+        <string name="filePattern" caption="File Pattern" description="The file pattern to poll." required="true" javaType="java.lang.String"></string>
+      </group>
+      <group id="polling" caption="Polling">
+        <string defaultValue="1000" name="pollingPeriod" caption="Polling Period" description="Polling Period for Message Sources with Polling Strategy in ms." required="false" javaType="java.lang.String"></string>
+      </group>
+    </attribute-category>
+  </cloud-connector-message-source>
+  <global-cloud-connector versions="[3.5.0,8.0.0]" caption="Smb: Configuration" description="Global Configuration configuration information." icon="icons/theme.classic/smb-connector-small.png" localId="config" image="icons/theme.classic/smb-connector-large.png" abstract="false" extends="http://www.mulesoft.org/schema/mule/smb/parentConfig" connectivityTesting="off" metaData="static" metaDataKeyDisplay="DISPLAY_NAME" supportsUserDefinedMetaData="false">
+    <attribute-category caption="General" description="Smb configuration properties.">
+      <group id="smbGenericProperties" caption="Basic Settings">
+        <name name="name" caption="Name" description="Give a name to this configuration so it can be later referenced by config-ref." required="true"></name>
+      </group>
+      <group id="general Settings" caption="General Settings">
+        <string name="username" caption="Username" description="" supportsExpressions="false" required="true" javaType="java.lang.String"></string>
+        <string name="password" caption="Password" description="" supportsExpressions="false" required="true" javaType="java.lang.String"></string>
+        <string name="host" caption="Host" description="" supportsExpressions="false" required="true" javaType="java.lang.String"></string>
+        <string name="domain" caption="Domain" description="" supportsExpressions="false" required="false" javaType="java.lang.String"></string>
+        <string name="folder" caption="Folder" description="" supportsExpressions="false" required="true" javaType="java.lang.String"></string>
+      </group>
+      <group id="filters" caption="Filters">
+        <boolean defaultValue="false" name="checkFileAge" caption="Check File Age" description="Filter to check file age." supportsExpressions="false" required="false" javaType="boolean"></boolean>
+        <integer min="0" step="1" name="fileAge" caption="File Age" description="Process files older than file age in ms." supportsExpressions="false" required="false" javaType="long"></integer>
+      </group>
+    </attribute-category>
+    <attribute-category caption="Advanced" description="Advanced.">
+      <group id="file Archiving" caption="File Archiving">
+        <string name="outputFolder" caption="Output Folder" description="Process files older than file age in ms." supportsExpressions="false" required="false" javaType="java.lang.String"></string>
+      </group>
+    </attribute-category>
+  </global-cloud-connector>
+  <cloud-connector caption="Abstractsmbconnectorgeneric" description="Interact with Smb." icon="icons/theme.classic/smb-connector-small.png" localId="abstractSmbConnectorGeneric" image="icons/theme.classic/smb-connector-large.png" abstract="true">
+    <attribute-category caption="General" description="General.">
+      <group id="abstractSmbConnectorGeneric" caption="Basic Settings">
+        <globalRef requiredType="http://www.mulesoft.org/schema/mule/smb/config" name="config-ref" caption="Connector Configuration" description="Specify which configuration to use for this invocation." required="true"></globalRef>
+      </group>
+    </attribute-category>
+  </cloud-connector>
+  <cloud-connector versions="[3.5.0,8.0.0]" aliasId="org.mule.tooling.ui.modules.core.pattern.smb" caption="Smb" description="" icon="icons/theme.classic/smb-connector-small.png" localId="smb-connector" image="icons/theme.classic/smb-connector-large.png" extends="http://www.mulesoft.org/schema/mule/smb/abstractSmbConnectorGeneric">
+    <attribute-category caption="General" description="General.">
+      <group id="smbConnectorGeneric" caption="Basic Settings">
+        <modeSwitch alwaysCombo="true" name="Smb operations to execute" caption="Operation" description="Operation.">
+          <no-operation abstractElement="http://www.mulesoft.org/schema/mule/smb/abstractSmbConnectorGeneric" versions="[3.5.0,8.0.0]" connector-name="processor"></no-operation>
+          <mode modeId="http://www.mulesoft.org/schema/mule/smb/copy-file" modeLabel="Copy file"></mode>
+          <mode modeId="http://www.mulesoft.org/schema/mule/smb/delete-file" modeLabel="Delete file"></mode>
+          <mode modeId="http://www.mulesoft.org/schema/mule/smb/get-files" modeLabel="Get files"></mode>
+          <mode modeId="http://www.mulesoft.org/schema/mule/smb/move-file" modeLabel="Move file"></mode>
+          <mode modeId="http://www.mulesoft.org/schema/mule/smb/read-file" modeLabel="Read file"></mode>
+        </modeSwitch>
+      </group>
+    </attribute-category>
+  </cloud-connector>
+  <cloud-connector returnType="java.lang.Boolean" caption="Copy File" icon="icons/theme.classic/smb-connector-small.png" localId="copy-file" image="icons/theme.classic/smb-connector-large.png" abstract="true" extends="http://www.mulesoft.org/schema/mule/smb/abstractSmbConnectorGeneric" metaData="static">
+    <attribute-category caption="General" description="General.">
+      <group id="general" caption="General">
+        <string name="fileName" caption="File Name" description="" required="true" javaType="java.lang.String"></string>
+        <string name="printerFileExtensionType" caption="Printer File Extension Type" description="" required="true" javaType="java.lang.String"></string>
+      </group>
+    </attribute-category>
+  </cloud-connector>
+  <cloud-connector returnType="boolean" caption="Delete File" icon="icons/theme.classic/smb-connector-small.png" localId="delete-file" image="icons/theme.classic/smb-connector-large.png" abstract="true" extends="http://www.mulesoft.org/schema/mule/smb/abstractSmbConnectorGeneric" metaData="static">
+    <attribute-category caption="General" description="General.">
+      <group id="general" caption="General">
+        <string name="smbObject-ref" caption="Smb Object Reference" description="" required="true" javaType="jcifs.smb.SmbFile"></string>
+      </group>
+    </attribute-category>
+  </cloud-connector>
+  <cloud-connector returnType="java.util.List&lt;java.lang.String&gt;" caption="Get Files" icon="icons/theme.classic/smb-connector-small.png" localId="get-files" image="icons/theme.classic/smb-connector-large.png" abstract="true" extends="http://www.mulesoft.org/schema/mule/smb/abstractSmbConnectorGeneric" metaData="static">
+    <attribute-category caption="General" description="General.">
+      <group id="general" caption="General">
+        <string name="filePattern" caption="File Pattern" description="" required="true" javaType="java.lang.String"></string>
+      </group>
+    </attribute-category>
+  </cloud-connector>
+  <cloud-connector returnType="boolean" caption="Move File" icon="icons/theme.classic/smb-connector-small.png" localId="move-file" image="icons/theme.classic/smb-connector-large.png" abstract="true" extends="http://www.mulesoft.org/schema/mule/smb/abstractSmbConnectorGeneric" metaData="static">
+    <attribute-category caption="General" description="General.">
+      <group id="general" caption="General">
+        <string name="smbObject-ref" caption="Smb Object Reference" description="The SmbFile object of the processing file." required="true" javaType="jcifs.smb.SmbFile"></string>
+        <string name="smbOriginalFilename" caption="Smb Original Filename" description="" required="true" javaType="java.lang.String"></string>
+      </group>
+    </attribute-category>
+  </cloud-connector>
+  <cloud-connector returnType="byte[]" caption="Read File" icon="icons/theme.classic/smb-connector-small.png" localId="read-file" image="icons/theme.classic/smb-connector-large.png" abstract="true" extends="http://www.mulesoft.org/schema/mule/smb/abstractSmbConnectorGeneric" metaData="static">
+    <attribute-category caption="General" description="General.">
+      <group id="general" caption="General">
+        <string name="fileName" caption="File Name" description="The name of the file to read (excluding path)." required="true" javaType="java.lang.String"></string>
+      </group>
+    </attribute-category>
+  </cloud-connector>
+</namespace>

@@ -1,0 +1,9 @@
+org/mule/modules/smb/automation/functional/BaseSmbTestCase.class
+org/mule/modules/smb/automation/functional/MoveFileTestCases.class
+org/mule/modules/smb/automation/functional/TestProperties.class
+org/mule/modules/smb/automation/functional/GetFilesTestCases.class
+org/mule/modules/smb/automation/functional/SourceTestCases.class
+org/mule/modules/smb/automation/functional/ReadFileTestCases.class
+org/mule/modules/smb/automation/functional/DeleteFileTestCases.class
+org/mule/modules/smb/automation/functional/CopyFileTestCases.class
+org/mule/modules/smb/automation/runner/FunctionalTestSuite.class
